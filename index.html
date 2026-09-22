@@ -130,6 +130,7 @@
     <li><strong>เมื่อเข้าสู่ระบบ:</strong> แอปนี้ใช้ Firebase Authentication เพื่อยืนยันตัวตนของคุณ หากเข้าสู่ระบบด้วย Google เราจะได้รับ <strong>อีเมลและชื่อที่แสดง</strong> จากบัญชี Google ของคุณ (แอปนี้ไม่เก็บหรือแสดงรูปโปรไฟล์ แม้ Google จะส่งข้อมูลนี้มาให้ก็ตาม) หากเข้าสู่ระบบด้วยอีเมล/รหัสผ่าน เราจะได้รับอีเมลที่คุณลงทะเบียน แอปนี้ไม่เก็บรหัสผ่านที่แท้จริงของคุณเอง — การยืนยันรหัสผ่านทั้งหมดดำเนินการโดย Firebase Authentication ของ Google</li>
     <li><strong>ข้อมูลทางเทคนิคจากการเข้าสู่ระบบ:</strong> การใช้งาน Firebase Authentication และ Google Sign-In จำเป็นต้องส่งข้อมูลทางเทคนิคบางอย่าง (เช่น ที่อยู่ IP ข้อมูลอุปกรณ์) ไปยังเซิร์ฟเวอร์ของ Google เพื่อความปลอดภัยในการยืนยันตัวตน เป็นส่วนหนึ่งของการทำงานปกติของระบบเข้าสู่ระบบ ไม่ใช่ข้อมูลที่แอปนี้เก็บหรือใช้เพิ่มเติมเอง</li>
     <li><strong>ข้อมูลสวนของคุณ:</strong> ข้อมูลแปลงปลูก งานดูแลสวน รายการรายรับ-รายจ่าย ข้อมูลการขายผลปาล์ม และรูปภาพที่คุณเพิ่มในแอป <strong>ทั้งหมดถูกเก็บไว้ในเครื่องของคุณเท่านั้น</strong> (ในฐานข้อมูลภายในอุปกรณ์) เราไม่ส่งข้อมูลเหล่านี้ไปยังเซิร์ฟเวอร์ใด ๆ</li>
+    <li><strong>ข้อมูลเมื่อแอปขัดข้อง (Crash reports):</strong> หากแอปเกิดข้อขัดข้องในเวอร์ชันที่เผยแพร่จริง (ไม่ใช่ระหว่างพัฒนา) เราใช้ Firebase Crashlytics เพื่อรับรายงานทางเทคนิคเกี่ยวกับข้อขัดข้องนั้น (เช่น ลำดับขั้นตอนที่เกิดข้อผิดพลาดในโค้ด รุ่นอุปกรณ์ เวอร์ชันระบบปฏิบัติการ และเวอร์ชันแอป) เพื่อให้เราสามารถแก้ไขปัญหาและดูแลรักษาแอปได้ รายงานเหล่านี้ <strong>ไม่มี</strong> อีเมล ตำแหน่งที่ตั้ง หรือข้อมูลสวน/ข้อมูลการเงินของคุณอยู่เลย</li>
   </ul>
 
   <h2>2. ไฟล์สำรองข้อมูล</h2>
@@ -139,7 +140,7 @@
   <ul>
     <li>เราไม่แสดงโฆษณาในแอปนี้</li>
     <li>เราไม่ขายหรือแบ่งปันข้อมูลของคุณให้บุคคลที่สามเพื่อการตลาดหรือโฆษณา</li>
-    <li>แอปนี้ไม่มีระบบวิเคราะห์พฤติกรรมผู้ใช้ (analytics) หรือระบบติดตาม (tracking) ใด ๆ นอกเหนือจากที่จำเป็นสำหรับการเข้าสู่ระบบตามที่ระบุไว้ข้างต้น</li>
+    <li>แอปนี้ไม่มีระบบวิเคราะห์พฤติกรรมผู้ใช้ (analytics) หรือระบบติดตาม (tracking) พฤติกรรมการใช้งานใด ๆ ทั้งสิ้น — ข้อมูลทางเทคนิคที่ส่งออกจากแอปมีเพียงข้อมูลเข้าสู่ระบบและรายงานข้อขัดข้องตามที่ระบุไว้ข้างต้นเท่านั้น</li>
   </ul>
 
   <h2>4. การเก็บรักษาและการลบข้อมูล</h2>
@@ -178,6 +179,7 @@
     <li><strong>When you sign in:</strong> The App uses Firebase Authentication to verify your identity. If you sign in with Google, we receive your <strong>email address and display name</strong> from your Google account (the App does not collect or display a profile photo, even though Google's sign-in response includes one). If you sign in with email/password, we receive the email you register. The App never stores your actual password — all password verification is handled by Google's Firebase Authentication.</li>
     <li><strong>Technical sign-in data:</strong> Using Firebase Authentication and Google Sign-In necessarily sends some technical information (such as IP address and device information) to Google's servers as part of secure authentication. This is standard sign-in infrastructure behavior, not something the App additionally collects or uses itself.</li>
     <li><strong>Your farm data:</strong> Plot records, care tasks, income/expense transactions, palm sale records, and any photos you add are <strong>stored locally on your device only</strong>, in an on-device database. We do not transmit this data to any server.</li>
+    <li><strong>Crash reports:</strong> If the App crashes in a published release (not during development), we use Firebase Crashlytics to receive technical reports about that crash (such as the code path where the error occurred, device model, OS version, and app version) so we can fix the problem and maintain the App. These reports <strong>never</strong> include your email, location, or your farm/financial data.</li>
   </ul>
 
   <h2>2. Backup Files</h2>
@@ -187,7 +189,7 @@
   <ul>
     <li>We do not display advertising in this App.</li>
     <li>We do not sell or share your data with third parties for marketing or advertising purposes.</li>
-    <li>The App has no analytics or tracking beyond what's necessary for sign-in, as described above.</li>
+    <li>The App has no behavioral analytics or usage tracking of any kind — the only technical data it ever sends out is the sign-in data and crash reports described above.</li>
   </ul>
 
   <h2>4. Data Retention and Deletion</h2>
