@@ -121,7 +121,7 @@
     <span>Palm Farm Flow</span>
   </div>
   <h1>นโยบายความเป็นส่วนตัว</h1>
-  <p class="updated">ปรับปรุงล่าสุด: 23 กันยายน 2569</p>
+  <p class="updated">ปรับปรุงล่าสุด: 10 ตุลาคม 2569</p>
 
   <p>Palm Farm Flow ("แอปนี้") เป็นแอปสำหรับเกษตรกรผู้ปลูกปาล์มน้ำมัน ใช้บันทึกและจัดการข้อมูลแปลงปลูก งานดูแลสวน และการเงินของสวนปาล์ม นโยบายนี้อธิบายว่าแอปนี้เก็บ ใช้ และเก็บรักษาข้อมูลของคุณอย่างไร</p>
 
@@ -134,33 +134,50 @@
     <li><strong>ข้อมูลการใช้งานภายในแอป:</strong> แอปนี้เก็บข้อมูลการใช้งานพื้นฐาน (เช่น หน้าจอที่เปิด หรือฟีเจอร์ที่ใช้ และจำนวนครั้ง) <strong>ไว้ในเครื่องของคุณเท่านั้น</strong> เพื่อให้เราเข้าใจว่าฟีเจอร์ใดถูกใช้งานจริงและควรพัฒนาต่อ ข้อมูลนี้<strong>ไม่มีการส่งออกจากเครื่องหรือแบ่งปันกับผู้ใดเลย</strong> ไม่มีชื่อ อีเมล ตำแหน่งที่ตั้ง หรือเนื้อหาข้อมูลสวน/การเงินของคุณอยู่ในข้อมูลนี้ และจะถูกลบไปพร้อมกับข้อมูลอื่นเมื่อคุณลบบัญชี</li>
   </ul>
 
-  <h2>2. ไฟล์สำรองข้อมูล</h2>
-  <p>แอปนี้มีฟีเจอร์ "สำรองข้อมูล" ที่ทำงาน <strong>บนอุปกรณ์ของคุณเท่านั้น</strong>: เมื่อคุณกดสร้างไฟล์สำรอง แอปจะรวมข้อมูลสวน งาน การเงิน และรูปภาพเป็นไฟล์เดียว แล้วเปิดหน้าต่างบันทึกไฟล์ของระบบ Android ให้คุณเลือกที่จัดเก็บเอง — ณ ปัจจุบัน <strong>ไม่มีระบบสำรองข้อมูลอัตโนมัติขึ้นคลาวด์ (cloud backup)</strong> ในแอปนี้ ไฟล์สำรองจะไปอยู่ที่ใดขึ้นอยู่กับที่คุณเลือกบันทึก (เช่น หน่วยความจำเครื่อง หรือหากคุณเลือกโฟลเดอร์ที่ซิงก์กับคลาวด์เอง เช่น Google Drive ก็เป็นการกระทำของคุณเอง ไม่ใช่ของแอป) เนื่องจากไฟล์สำรองอาจมีข้อมูลส่วนตัวและข้อมูลการเงินของคุณ กรุณาเก็บรักษาไว้ในที่ปลอดภัย</p>
-
-  <h2>3. สิ่งที่เราไม่ทำ</h2>
+  <h2>2. ข้อมูลสถานะการทดลองใช้/สมัครสมาชิก Pro</h2>
+  <p>หากคุณเลือกเริ่มทดลองใช้ Pro ฟรี หรือสมัครสมาชิก Pro แอปนี้จะบันทึกข้อมูลต่อไปนี้ไว้ใน <strong>Firebase Firestore ของ Google</strong> โดยผูกกับ Firebase UID ของคุณ (ซึ่งผูกกับอีเมลที่คุณใช้เข้าสู่ระบบ) — ไม่ใช่เก็บไว้ในเครื่องเท่านั้น:</p>
   <ul>
-    <li>เราไม่แสดงโฆษณาในแอปนี้</li>
-    <li>เราไม่ขายหรือแบ่งปันข้อมูลของคุณให้บุคคลที่สามเพื่อการตลาดหรือโฆษณา</li>
-    <li>แอปนี้มีการเก็บข้อมูลการใช้งานพื้นฐานไว้ในเครื่องเท่านั้นตามที่ระบุไว้ในข้อ 1 แต่<strong>ไม่มีระบบวิเคราะห์พฤติกรรมผู้ใช้ (analytics) หรือ SDK ติดตามพฤติกรรมจากภายนอกใด ๆ</strong> และข้อมูลการใช้งานนี้ไม่เคยถูกส่งออกจากเครื่องเลย — ข้อมูลทางเทคนิคที่ส่งออกจากแอปจริง ๆ มีเพียงข้อมูลเข้าสู่ระบบและรายงานข้อขัดข้องตามที่ระบุไว้ข้างต้นเท่านั้น</li>
+    <li><strong>trialStartDate</strong> — วันที่คุณเริ่มทดลองใช้ Pro</li>
+    <li><strong>trialExpiresAt</strong> — วันที่การทดลองใช้สิ้นสุด</li>
+    <li><strong>proStatus</strong> — สถานะปัจจุบันของคุณ (ฟรี/ทดลองใช้/สมาชิก/หมดอายุ)</li>
+  </ul>
+  <p>จุดประสงค์เดียวของข้อมูลนี้คือจัดการสถานะการทดลองใช้/สมาชิก Pro ของคุณให้ถูกต้อง รวมถึงกรณีที่คุณลบแอปแล้วติดตั้งใหม่ด้วยบัญชีเดิม ข้อมูลนี้<strong>ไม่มี</strong>ข้อมูลแปลงปลูก งาน การเงิน หรือรูปภาพของคุณอยู่เลย และจะถูก<strong>ลบทันทีที่คุณลบบัญชี</strong> (ดูข้อ 6 "การเก็บรักษาและการลบข้อมูล")</p>
+
+  <h2>3. ข้อมูลที่เราแชร์กับผู้ให้บริการ</h2>
+  <p>แอปนี้ใช้ Firebase (ผลิตภัณฑ์ของ Google) เป็นผู้ให้บริการทางเทคนิค ข้อมูลที่เกี่ยวข้องจะถูกส่งไปยัง Firebase ในฐานะผู้ให้บริการของเรา — ไม่ใช่การขายหรือแบ่งปันเพื่อการตลาด/โฆษณา (ดูข้อ 5 "สิ่งที่เราไม่ทำ"):</p>
+  <ul>
+    <li><strong>Firebase Authentication</strong> — อีเมลและชื่อที่แสดง (ดูข้อ 1)</li>
+    <li><strong>Firebase Crashlytics</strong> — รายงานข้อขัดข้องทางเทคนิค (ดูข้อ 1)</li>
+    <li><strong>Firebase Firestore</strong> — ข้อมูลสถานะการทดลองใช้/สมาชิก Pro (ดูข้อ 2)</li>
   </ul>
 
-  <h2>4. การเก็บรักษาและการลบข้อมูล</h2>
+  <h2>4. ไฟล์สำรองข้อมูล</h2>
+  <p>แอปนี้มีฟีเจอร์ "สำรองข้อมูล" ที่ทำงาน <strong>บนอุปกรณ์ของคุณเท่านั้น</strong>: เมื่อคุณกดสร้างไฟล์สำรอง แอปจะรวมข้อมูลสวน งาน การเงิน และรูปภาพเป็นไฟล์เดียว แล้วเปิดหน้าต่างบันทึกไฟล์ของระบบ Android ให้คุณเลือกที่จัดเก็บเอง — ณ ปัจจุบัน <strong>ไม่มีระบบสำรองข้อมูลอัตโนมัติขึ้นคลาวด์ (cloud backup)</strong> ในแอปนี้ ไฟล์สำรองจะไปอยู่ที่ใดขึ้นอยู่กับที่คุณเลือกบันทึก (เช่น หน่วยความจำเครื่อง หรือหากคุณเลือกโฟลเดอร์ที่ซิงก์กับคลาวด์เอง เช่น Google Drive ก็เป็นการกระทำของคุณเอง ไม่ใช่ของแอป) เนื่องจากไฟล์สำรองอาจมีข้อมูลส่วนตัวและข้อมูลการเงินของคุณ กรุณาเก็บรักษาไว้ในที่ปลอดภัย</p>
+
+  <h2>5. สิ่งที่เราไม่ทำ</h2>
+  <ul>
+    <li>เราไม่แสดงโฆษณาในแอปนี้</li>
+    <li>เราไม่ขายหรือแบ่งปันข้อมูลของคุณให้บุคคลที่สามเพื่อการตลาดหรือโฆษณา — ข้อ 3 ข้างต้นเป็นการส่งข้อมูลให้ผู้ให้บริการทางเทคนิค (Firebase) เพื่อให้แอปทำงานได้เท่านั้น ไม่ใช่การแบ่งปันเพื่อการตลาด/โฆษณา</li>
+    <li>แอปนี้มีการเก็บข้อมูลการใช้งานพื้นฐานไว้ในเครื่องเท่านั้นตามที่ระบุไว้ในข้อ 1 แต่<strong>ไม่มีระบบวิเคราะห์พฤติกรรมผู้ใช้ (analytics) หรือ SDK ติดตามพฤติกรรมจากภายนอกใด ๆ</strong> และข้อมูลการใช้งานนี้ไม่เคยถูกส่งออกจากเครื่องเลย</li>
+  </ul>
+
+  <h2>6. การเก็บรักษาและการลบข้อมูล</h2>
   <ul>
     <li><strong>ออกจากระบบ:</strong> เมื่อคุณออกจากระบบ ข้อมูลในเครื่องของบัญชีนั้นจะยังคงอยู่ในอุปกรณ์ และจะกลับมาแสดงเมื่อคุณเข้าสู่ระบบด้วยบัญชีเดิมอีกครั้ง</li>
     <li><strong>ถอนการติดตั้งแอป:</strong> การลบแอปออกจากอุปกรณ์จะลบข้อมูลสวนทั้งหมดที่เก็บไว้ในเครื่อง (ฐานข้อมูล รูปภาพ) อย่างถาวร เว้นแต่คุณจะสร้างไฟล์สำรองไว้ก่อน</li>
-    <li><strong>การลบบัญชี:</strong> คุณสามารถลบบัญชีของคุณได้เองในแอป โดยไปที่ <strong>เพิ่มเติม &gt; บัญชี &gt; "ลบบัญชีและข้อมูลทั้งหมด"</strong> การลบบัญชีจะ (1) ลบบัญชีผู้ใช้ของคุณออกจากระบบยืนยันตัวตนอย่างถาวร และ (2) ลบข้อมูลสวนทั้งหมดที่เก็บไว้ในเครื่องนี้สำหรับบัญชีนั้น (แปลง งาน การเงิน และรูปภาพ) อย่างถาวร ขั้นตอนนี้มีการยืนยันหลายขั้นตอนเนื่องจากไม่สามารถย้อนกลับได้ หากต้องการเก็บข้อมูลไว้ กรุณาสร้างไฟล์สำรองก่อนลบบัญชี</li>
+    <li><strong>การลบบัญชี:</strong> คุณสามารถลบบัญชีของคุณได้เองในแอป โดยไปที่ <strong>เพิ่มเติม &gt; บัญชี &gt; "ลบบัญชีและข้อมูลทั้งหมด"</strong> การลบบัญชีจะ (1) ลบบัญชีผู้ใช้ของคุณออกจากระบบยืนยันตัวตนอย่างถาวร (2) ลบข้อมูลสวนทั้งหมดที่เก็บไว้ในเครื่องนี้สำหรับบัญชีนั้น (แปลง งาน การเงิน และรูปภาพ) อย่างถาวร และ (3) ลบข้อมูลสถานะการทดลองใช้/สมาชิก Pro ของคุณ (ข้อ 2) จาก Firebase Firestore อย่างถาวร ขั้นตอนนี้มีการยืนยันหลายขั้นตอนเนื่องจากไม่สามารถย้อนกลับได้ หากต้องการเก็บข้อมูลไว้ กรุณาสร้างไฟล์สำรองก่อนลบบัญชี</li>
   </ul>
 
-  <h2>5. ความปลอดภัย</h2>
+  <h2>7. ความปลอดภัย</h2>
   <p>ข้อมูลสวนของคุณเก็บอยู่ในอุปกรณ์ของคุณเอง ความปลอดภัยของข้อมูลจึงขึ้นอยู่กับความปลอดภัยของอุปกรณ์นั้นด้วย การยืนยันตัวตนดำเนินการผ่าน Firebase Authentication ของ Google ซึ่งเป็นระบบมาตรฐานที่ใช้กันอย่างแพร่หลาย</p>
 
-  <h2>6. เด็กและเยาวชน</h2>
+  <h2>8. เด็กและเยาวชน</h2>
   <p>แอปนี้ไม่ได้ออกแบบมาสำหรับเด็กอายุต่ำกว่า 13 ปี และเราไม่เก็บข้อมูลโดยเจตนาจากบุคคลกลุ่มนี้</p>
 
-  <h2>7. การเปลี่ยนแปลงนโยบาย</h2>
+  <h2>9. การเปลี่ยนแปลงนโยบาย</h2>
   <p>หากมีการเปลี่ยนแปลงนโยบายนี้อย่างมีนัยสำคัญ เราจะปรับปรุงวันที่ด้านบนของเอกสารนี้</p>
 
-  <h2>8. ติดต่อเรา</h2>
+  <h2>10. ติดต่อเรา</h2>
   <p>หากมีคำถามเกี่ยวกับความเป็นส่วนตัว หรือพบปัญหาในการลบบัญชีด้วยตนเอง กรุณาติดต่อ: <strong><a href="mailto:palmfarmflow@gmail.com">palmfarmflow@gmail.com</a></strong></p>
 </section>
 
@@ -171,7 +188,7 @@
     <span>Palm Farm Flow</span>
   </div>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: September 23, 2026</p>
+  <p class="updated">Last updated: October 10, 2026</p>
 
   <p>Palm Farm Flow ("the App") is an app for oil palm smallholder farmers to record and manage plot, task, and financial data for their farms. This policy explains how the App collects, uses, and retains your data.</p>
 
@@ -184,33 +201,50 @@
     <li><strong>In-app usage data:</strong> The App keeps basic local usage information (such as which screens are opened or which features are used, and how often) <strong>stored on your device only</strong>, to help us understand which features are actually used and worth improving. This data is <strong>never exported from your device or shared with anyone</strong>, contains no name, email, location, or farm/financial content, and is deleted along with your other data when you delete your account.</li>
   </ul>
 
-  <h2>2. Backup Files</h2>
-  <p>The App's "Backup" feature operates <strong>entirely on your device</strong>: when you create a backup, the App bundles your plot, task, finance, and photo data into a single file and opens Android's native Save dialog for you to choose where to store it. <strong>There is currently no automatic cloud backup</strong> in this App. Where the backup file ends up depends entirely on where you choose to save it (e.g. local device storage, or a cloud-synced folder like Google Drive if you choose one yourself — that is your own action, not something the App does). Because backup files may contain personal and financial data, please store them somewhere secure.</p>
-
-  <h2>3. What We Don't Do</h2>
+  <h2>2. Pro Trial/Subscription Status</h2>
+  <p>If you choose to start a free Pro trial or subscribe to Pro, the App records the following in <strong>Google's Firebase Firestore</strong>, tied to your Firebase UID (which is tied to the email you sign in with) — not only stored on your device:</p>
   <ul>
-    <li>We do not display advertising in this App.</li>
-    <li>We do not sell or share your data with third parties for marketing or advertising purposes.</li>
-    <li>The App keeps basic local usage data on your device only, as described in Section 1, but has no behavioral analytics platform or third-party tracking SDK of any kind, and this local usage data is never sent off your device — the only technical data the App ever actually sends out is the sign-in data and crash reports described above.</li>
+    <li><strong>trialStartDate</strong> — the date you started your Pro trial</li>
+    <li><strong>trialExpiresAt</strong> — the date your trial ends</li>
+    <li><strong>proStatus</strong> — your current status (free/trial/paid/expired)</li>
+  </ul>
+  <p>The sole purpose of this data is to correctly manage your Pro trial/subscription status, including if you uninstall and reinstall the App under the same account. This record <strong>never</strong> includes your plot, task, finance, or photo data, and is <strong>deleted immediately when you delete your account</strong> (see Section 6, "Data Retention and Deletion").</p>
+
+  <h2>3. Data We Share With Service Providers</h2>
+  <p>The App uses Firebase (a Google product) as its technical service provider. The related data below is sent to Firebase as our service provider — this is not selling or sharing for marketing/advertising purposes (see Section 5, "What We Don't Do"):</p>
+  <ul>
+    <li><strong>Firebase Authentication</strong> — email address and display name (see Section 1)</li>
+    <li><strong>Firebase Crashlytics</strong> — technical crash reports (see Section 1)</li>
+    <li><strong>Firebase Firestore</strong> — Pro trial/subscription status (see Section 2)</li>
   </ul>
 
-  <h2>4. Data Retention and Deletion</h2>
+  <h2>4. Backup Files</h2>
+  <p>The App's "Backup" feature operates <strong>entirely on your device</strong>: when you create a backup, the App bundles your plot, task, finance, and photo data into a single file and opens Android's native Save dialog for you to choose where to store it. <strong>There is currently no automatic cloud backup</strong> in this App. Where the backup file ends up depends entirely on where you choose to save it (e.g. local device storage, or a cloud-synced folder like Google Drive if you choose one yourself — that is your own action, not something the App does). Because backup files may contain personal and financial data, please store them somewhere secure.</p>
+
+  <h2>5. What We Don't Do</h2>
+  <ul>
+    <li>We do not display advertising in this App.</li>
+    <li>We do not sell or share your data with third parties for marketing or advertising purposes — Section 3 above is data sent to a technical service provider (Firebase) solely to make the App function, not marketing/advertising sharing.</li>
+    <li>The App keeps basic local usage data on your device only, as described in Section 1, but has no behavioral analytics platform or third-party tracking SDK of any kind, and this local usage data is never sent off your device.</li>
+  </ul>
+
+  <h2>6. Data Retention and Deletion</h2>
   <ul>
     <li><strong>Signing out:</strong> When you sign out, that account's local data remains on your device and reappears when you sign back into the same account.</li>
     <li><strong>Uninstalling the App:</strong> Removing the App deletes all locally-stored farm data (database, photos) permanently, unless you created a backup first.</li>
-    <li><strong>Account deletion:</strong> You can delete your account yourself, in the App: go to <strong>More &gt; Account &gt; "Delete account and all data"</strong> (ลบบัญชีและข้อมูลทั้งหมด). Deleting your account (1) permanently deletes your account from our authentication system, and (2) permanently deletes all farm data stored on this device for that account (plots, tasks, finance records, and photos). This requires multiple confirmation steps because it cannot be undone. If you want to keep your data, create a backup before deleting your account.</li>
+    <li><strong>Account deletion:</strong> You can delete your account yourself, in the App: go to <strong>More &gt; Account &gt; "Delete account and all data"</strong> (ลบบัญชีและข้อมูลทั้งหมด). Deleting your account (1) permanently deletes your account from our authentication system, (2) permanently deletes all farm data stored on this device for that account (plots, tasks, finance records, and photos), and (3) permanently deletes your Pro trial/subscription status (Section 2) from Firebase Firestore. This requires multiple confirmation steps because it cannot be undone. If you want to keep your data, create a backup before deleting your account.</li>
   </ul>
 
-  <h2>5. Security</h2>
+  <h2>7. Security</h2>
   <p>Your farm data lives on your own device, so its security also depends on your device's own security. Authentication is handled through Google's Firebase Authentication, a widely-used standard system.</p>
 
-  <h2>6. Children</h2>
+  <h2>8. Children</h2>
   <p>This App is not directed at children under 13, and we do not knowingly collect data from them.</p>
 
-  <h2>7. Changes to This Policy</h2>
+  <h2>9. Changes to This Policy</h2>
   <p>If this policy changes materially, we will update the date at the top of this document.</p>
 
-  <h2>8. Contact Us</h2>
+  <h2>10. Contact Us</h2>
   <p>For privacy questions, or if you run into trouble deleting your account yourself, contact: <strong><a href="mailto:palmfarmflow@gmail.com">palmfarmflow@gmail.com</a></strong></p>
 </section>
 
