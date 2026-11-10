@@ -121,7 +121,7 @@
     <span>Palm Farm Flow</span>
   </div>
   <h1>นโยบายความเป็นส่วนตัว</h1>
-  <p class="updated">ปรับปรุงล่าสุด: 7 พฤศจิกายน 2569</p>
+  <p class="updated">ปรับปรุงล่าสุด: 10 พฤศจิกายน 2569</p>
 
   <p>Palm Farm Flow ("แอปนี้") เป็นแอปสำหรับเกษตรกรผู้ปลูกปาล์มน้ำมัน ใช้บันทึกและจัดการข้อมูลแปลงปลูก งานดูแลสวน และการเงินของสวนปาล์ม นโยบายนี้อธิบายว่าแอปนี้เก็บ ใช้ และเก็บรักษาข้อมูลของคุณอย่างไร</p>
 
@@ -133,6 +133,7 @@
     <li><strong>ข้อมูลสวนของคุณ:</strong> ข้อมูลแปลงปลูก งานดูแลสวน รายการรายรับ-รายจ่าย ข้อมูลการขายผลปาล์ม และรูปภาพที่คุณเพิ่มในแอป <strong>ทั้งหมดถูกเก็บไว้ในเครื่องของคุณเท่านั้น</strong> (ในฐานข้อมูลภายในอุปกรณ์) เราไม่ส่งข้อมูลเหล่านี้ไปยังเซิร์ฟเวอร์ใด ๆ</li>
     <li><strong>ข้อมูลเมื่อแอปขัดข้อง (Crash reports):</strong> หากแอปเกิดข้อขัดข้องในเวอร์ชันที่เผยแพร่จริง (ไม่ใช่ระหว่างพัฒนา) เราใช้ Firebase Crashlytics เพื่อรับรายงานทางเทคนิคเกี่ยวกับข้อขัดข้องนั้น (เช่น ลำดับขั้นตอนที่เกิดข้อผิดพลาดในโค้ด รุ่นอุปกรณ์ เวอร์ชันระบบปฏิบัติการ และเวอร์ชันแอป) เพื่อให้เราสามารถแก้ไขปัญหาและดูแลรักษาแอปได้ รายงานเหล่านี้ <strong>ไม่มี</strong> อีเมล ตำแหน่งที่ตั้ง หรือข้อมูลสวน/ข้อมูลการเงินของคุณอยู่เลย</li>
     <li><strong>ข้อมูลการใช้งานภายในแอป:</strong> แอปนี้เก็บข้อมูลการใช้งานพื้นฐาน (เช่น หน้าจอที่เปิด หรือฟีเจอร์ที่ใช้ และจำนวนครั้ง) <strong>ไว้ในเครื่องของคุณเท่านั้น</strong> เพื่อให้เราเข้าใจว่าฟีเจอร์ใดถูกใช้งานจริงและควรพัฒนาต่อ ข้อมูลนี้<strong>ไม่มีการส่งออกจากเครื่องหรือแบ่งปันกับผู้ใดเลย</strong> ไม่มีชื่อ อีเมล ตำแหน่งที่ตั้ง หรือเนื้อหาข้อมูลสวน/การเงินของคุณอยู่ในข้อมูลนี้ และจะถูกลบไปพร้อมกับข้อมูลอื่นเมื่อคุณลบบัญชี</li>
+    <li><strong>การตรวจสอบความปลอดภัยของอุปกรณ์ (Google Play Integrity API):</strong> แอปนี้ใช้ Firebase App Check ร่วมกับ Google Play Integrity API เพื่อตรวจสอบว่าคำขอที่ส่งไปยังบริการ Firebase ของเรามาจากแอป Palm Farm Flow ของแท้ ที่ติดตั้งจาก Google Play บนอุปกรณ์ที่ไม่ถูกดัดแปลง จุดประสงค์คือ<strong>รักษาความปลอดภัยและป้องกันการทุจริต</strong> เช่น การปลอมคำขอเพื่อใช้สิทธิ์ทดลองใช้ Pro ซ้ำ ในการตรวจสอบนี้ Google อาจเก็บข้อมูลทางเทคนิคของอุปกรณ์และแอป รวมถึง<strong>รหัสอุปกรณ์ (Device IDs)</strong> การตรวจสอบนี้<strong>ไม่มี</strong>ชื่อ อีเมล ตำแหน่งที่ตั้ง หรือข้อมูลสวน/ข้อมูลการเงินของคุณอยู่เลย และเราไม่นำผลการตรวจสอบไปใช้ระบุตัวตนของคุณ</li>
   </ul>
 
   <h2>2. ข้อมูลสถานะการทดลองใช้/สมัครสมาชิก Pro</h2>
@@ -150,6 +151,7 @@
     <li><strong>Firebase Authentication</strong> — อีเมลและชื่อที่แสดง (ดูข้อ 1)</li>
     <li><strong>Firebase Crashlytics</strong> — รายงานข้อขัดข้องทางเทคนิค (ดูข้อ 1)</li>
     <li><strong>Firebase Firestore</strong> — ข้อมูลสถานะการทดลองใช้/สมาชิก Pro (ดูข้อ 2)</li>
+    <li><strong>Firebase App Check / Google Play Integrity API</strong> — ข้อมูลทางเทคนิคสำหรับตรวจสอบความปลอดภัยของอุปกรณ์และแอป รวมถึงรหัสอุปกรณ์ (ดูข้อ 1)</li>
   </ul>
 
   <h2>4. ไฟล์สำรองข้อมูล</h2>
@@ -170,7 +172,7 @@
   </ul>
 
   <h2>7. ความปลอดภัย</h2>
-  <p>ข้อมูลสวนของคุณเก็บอยู่ในอุปกรณ์ของคุณเอง ความปลอดภัยของข้อมูลจึงขึ้นอยู่กับความปลอดภัยของอุปกรณ์นั้นด้วย การยืนยันตัวตนดำเนินการผ่าน Firebase Authentication ของ Google ซึ่งเป็นระบบมาตรฐานที่ใช้กันอย่างแพร่หลาย</p>
+  <p>ข้อมูลสวนของคุณเก็บอยู่ในอุปกรณ์ของคุณเอง ความปลอดภัยของข้อมูลจึงขึ้นอยู่กับความปลอดภัยของอุปกรณ์นั้นด้วย การยืนยันตัวตนดำเนินการผ่าน Firebase Authentication ของ Google ซึ่งเป็นระบบมาตรฐานที่ใช้กันอย่างแพร่หลาย และคำขอไปยังบริการ Firebase ได้รับการตรวจสอบผ่าน Google Play Integrity API (ดูข้อ 1) เพื่อป้องกันการเข้าถึงจากแอปหรืออุปกรณ์ที่ไม่ใช่ของแท้</p>
 
   <h2>8. เด็กและเยาวชน</h2>
   <p>แอปนี้ไม่ได้ออกแบบมาสำหรับเด็กอายุต่ำกว่า 13 ปี และเราไม่เก็บข้อมูลโดยเจตนาจากบุคคลกลุ่มนี้</p>
@@ -189,7 +191,7 @@
     <span>Palm Farm Flow</span>
   </div>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: November 7, 2026</p>
+  <p class="updated">Last updated: November 10, 2026</p>
 
   <p>Palm Farm Flow ("the App") is an app for oil palm smallholder farmers to record and manage plot, task, and financial data for their farms. This policy explains how the App collects, uses, and retains your data.</p>
 
@@ -201,6 +203,7 @@
     <li><strong>Your farm data:</strong> Plot records, care tasks, income/expense transactions, palm sale records, and any photos you add are <strong>stored locally on your device only</strong>, in an on-device database. We do not transmit this data to any server.</li>
     <li><strong>Crash reports:</strong> If the App crashes in a published release (not during development), we use Firebase Crashlytics to receive technical reports about that crash (such as the code path where the error occurred, device model, OS version, and app version) so we can fix the problem and maintain the App. These reports <strong>never</strong> include your email, location, or your farm/financial data.</li>
     <li><strong>In-app usage data:</strong> The App keeps basic local usage information (such as which screens are opened or which features are used, and how often) <strong>stored on your device only</strong>, to help us understand which features are actually used and worth improving. This data is <strong>never exported from your device or shared with anyone</strong>, contains no name, email, location, or farm/financial content, and is deleted along with your other data when you delete your account.</li>
+    <li><strong>Device security checks (Google Play Integrity API):</strong> The App uses Firebase App Check with the Google Play Integrity API to verify that requests to our Firebase services come from the genuine Palm Farm Flow app, installed from Google Play, on an unmodified device. The purpose is <strong>security and fraud prevention</strong>, such as stopping forged requests that try to reuse a Pro trial. As part of this check, Google may collect technical information about the device and the App, including <strong>device identifiers (Device IDs)</strong>. These checks <strong>never</strong> include your name, email, location, or your farm/financial data, and we do not use their results to identify you.</li>
   </ul>
 
   <h2>2. Pro Trial/Subscription Status</h2>
@@ -218,6 +221,7 @@
     <li><strong>Firebase Authentication</strong> — email address and display name (see Section 1)</li>
     <li><strong>Firebase Crashlytics</strong> — technical crash reports (see Section 1)</li>
     <li><strong>Firebase Firestore</strong> — Pro trial/subscription status (see Section 2)</li>
+    <li><strong>Firebase App Check / Google Play Integrity API</strong> — technical device and app information, including device identifiers, for security checks (see Section 1)</li>
   </ul>
 
   <h2>4. Backup Files</h2>
@@ -238,7 +242,7 @@
   </ul>
 
   <h2>7. Security</h2>
-  <p>Your farm data lives on your own device, so its security also depends on your device's own security. Authentication is handled through Google's Firebase Authentication, a widely-used standard system.</p>
+  <p>Your farm data lives on your own device, so its security also depends on your device's own security. Authentication is handled through Google's Firebase Authentication, a widely-used standard system, and requests to our Firebase services are verified through the Google Play Integrity API (see Section 1) to block access from non-genuine apps or devices.</p>
 
   <h2>8. Children</h2>
   <p>This App is not directed at children under 13, and we do not knowingly collect data from them.</p>
