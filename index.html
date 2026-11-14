@@ -121,7 +121,7 @@
     <span>Palm Farm Flow</span>
   </div>
   <h1>นโยบายความเป็นส่วนตัว</h1>
-  <p class="updated">ปรับปรุงล่าสุด: 10 พฤศจิกายน 2569</p>
+  <p class="updated">ปรับปรุงล่าสุด: 14 พฤศจิกายน 2569</p>
 
   <p>Palm Farm Flow ("แอปนี้") เป็นแอปสำหรับเกษตรกรผู้ปลูกปาล์มน้ำมัน ใช้บันทึกและจัดการข้อมูลแปลงปลูก งานดูแลสวน และการเงินของสวนปาล์ม นโยบายนี้อธิบายว่าแอปนี้เก็บ ใช้ และเก็บรักษาข้อมูลของคุณอย่างไร</p>
 
@@ -130,7 +130,7 @@
     <li><strong>เมื่อเข้าสู่ระบบ:</strong> แอปนี้ใช้ Firebase Authentication เพื่อยืนยันตัวตนของคุณ หากเข้าสู่ระบบด้วย Google เราจะได้รับ <strong>อีเมลและชื่อที่แสดง</strong> จากบัญชี Google ของคุณ หากเข้าสู่ระบบด้วยอีเมล/รหัสผ่าน เราจะได้รับอีเมลที่คุณลงทะเบียน แอปนี้ไม่เก็บรหัสผ่านที่แท้จริงของคุณเอง — การยืนยันรหัสผ่านทั้งหมดดำเนินการโดย Firebase Authentication ของ Google</li>
     <li><strong>รูปโปรไฟล์ (photoUrl):</strong> เมื่อคุณเข้าสู่ระบบด้วย Google เราจะแสดงรูปโปรไฟล์ Google ของคุณภายในแอป รูปนี้โหลดจากเซิร์ฟเวอร์ของ Google โดยตรง และจะไม่ถูกบันทึกลงในฐานข้อมูลหรือไฟล์สำรองข้อมูลของเรา</li>
     <li><strong>ข้อมูลทางเทคนิคจากการเข้าสู่ระบบ:</strong> การใช้งาน Firebase Authentication และ Google Sign-In จำเป็นต้องส่งข้อมูลทางเทคนิคบางอย่าง (เช่น ที่อยู่ IP ข้อมูลอุปกรณ์) ไปยังเซิร์ฟเวอร์ของ Google เพื่อความปลอดภัยในการยืนยันตัวตน เป็นส่วนหนึ่งของการทำงานปกติของระบบเข้าสู่ระบบ ไม่ใช่ข้อมูลที่แอปนี้เก็บหรือใช้เพิ่มเติมเอง</li>
-    <li><strong>ข้อมูลสวนของคุณ:</strong> ข้อมูลแปลงปลูก งานดูแลสวน รายการรายรับ-รายจ่าย ข้อมูลการขายผลปาล์ม และรูปภาพที่คุณเพิ่มในแอป <strong>ทั้งหมดถูกเก็บไว้ในเครื่องของคุณเท่านั้น</strong> (ในฐานข้อมูลภายในอุปกรณ์) เราไม่ส่งข้อมูลเหล่านี้ไปยังเซิร์ฟเวอร์ใด ๆ</li>
+    <li><strong>ข้อมูลสวนของคุณ:</strong> ข้อมูลแปลงปลูก งานดูแลสวน รายการรายรับ-รายจ่าย ข้อมูลการขายผลปาล์ม และรูปภาพที่คุณเพิ่มในแอป <strong>ทั้งหมดถูกเก็บไว้ในเครื่องของคุณ</strong> (ในฐานข้อมูลภายในอุปกรณ์) เราไม่ส่งข้อมูลเหล่านี้ไปยังเซิร์ฟเวอร์ของเราหรือของผู้ให้บริการใด ๆ ข้อยกเว้นเดียวคือเมื่อ<strong>คุณสั่งสำรองข้อมูลขึ้น Google Drive ของคุณเอง</strong> (ดูข้อ 4)</li>
     <li><strong>ข้อมูลเมื่อแอปขัดข้อง (Crash reports):</strong> หากแอปเกิดข้อขัดข้องในเวอร์ชันที่เผยแพร่จริง (ไม่ใช่ระหว่างพัฒนา) เราใช้ Firebase Crashlytics เพื่อรับรายงานทางเทคนิคเกี่ยวกับข้อขัดข้องนั้น (เช่น ลำดับขั้นตอนที่เกิดข้อผิดพลาดในโค้ด รุ่นอุปกรณ์ เวอร์ชันระบบปฏิบัติการ และเวอร์ชันแอป) เพื่อให้เราสามารถแก้ไขปัญหาและดูแลรักษาแอปได้ รายงานเหล่านี้ <strong>ไม่มี</strong> อีเมล ตำแหน่งที่ตั้ง หรือข้อมูลสวน/ข้อมูลการเงินของคุณอยู่เลย</li>
     <li><strong>ข้อมูลการใช้งานภายในแอป:</strong> แอปนี้เก็บข้อมูลการใช้งานพื้นฐาน (เช่น หน้าจอที่เปิด หรือฟีเจอร์ที่ใช้ และจำนวนครั้ง) <strong>ไว้ในเครื่องของคุณเท่านั้น</strong> เพื่อให้เราเข้าใจว่าฟีเจอร์ใดถูกใช้งานจริงและควรพัฒนาต่อ ข้อมูลนี้<strong>ไม่มีการส่งออกจากเครื่องหรือแบ่งปันกับผู้ใดเลย</strong> ไม่มีชื่อ อีเมล ตำแหน่งที่ตั้ง หรือเนื้อหาข้อมูลสวน/การเงินของคุณอยู่ในข้อมูลนี้ และจะถูกลบไปพร้อมกับข้อมูลอื่นเมื่อคุณลบบัญชี</li>
     <li><strong>การตรวจสอบความปลอดภัยของอุปกรณ์ (Google Play Integrity API):</strong> แอปนี้ใช้ Firebase App Check ร่วมกับ Google Play Integrity API เพื่อตรวจสอบว่าคำขอที่ส่งไปยังบริการ Firebase ของเรามาจากแอป Palm Farm Flow ของแท้ ที่ติดตั้งจาก Google Play บนอุปกรณ์ที่ไม่ถูกดัดแปลง จุดประสงค์คือ<strong>รักษาความปลอดภัยและป้องกันการทุจริต</strong> เช่น การปลอมคำขอเพื่อใช้สิทธิ์ทดลองใช้ Pro ซ้ำ ในการตรวจสอบนี้ Google อาจเก็บข้อมูลทางเทคนิคของอุปกรณ์และแอป รวมถึง<strong>รหัสอุปกรณ์ (Device IDs)</strong> การตรวจสอบนี้<strong>ไม่มี</strong>ชื่อ อีเมล ตำแหน่งที่ตั้ง หรือข้อมูลสวน/ข้อมูลการเงินของคุณอยู่เลย และเราไม่นำผลการตรวจสอบไปใช้ระบุตัวตนของคุณ</li>
@@ -153,9 +153,22 @@
     <li><strong>Firebase Firestore</strong> — ข้อมูลสถานะการทดลองใช้/สมาชิก Pro (ดูข้อ 2)</li>
     <li><strong>Firebase App Check / Google Play Integrity API</strong> — ข้อมูลทางเทคนิคสำหรับตรวจสอบความปลอดภัยของอุปกรณ์และแอป รวมถึงรหัสอุปกรณ์ (ดูข้อ 1)</li>
   </ul>
+  <p>การสำรองข้อมูลขึ้น Google Drive (ข้อ 4) ไม่อยู่ในรายการนี้ เพราะไม่ใช่การส่งข้อมูลให้ผู้ให้บริการของเรา แต่เป็นการส่งไปเก็บใน Google Drive ของคุณเองตามคำสั่งของคุณ</p>
 
   <h2>4. ไฟล์สำรองข้อมูล</h2>
-  <p>แอปนี้มีฟีเจอร์ "สำรองข้อมูล" ที่ทำงาน <strong>บนอุปกรณ์ของคุณเท่านั้น</strong>: เมื่อคุณกดสร้างไฟล์สำรอง แอปจะรวมข้อมูลสวน งาน การเงิน และรูปภาพเป็นไฟล์เดียว แล้วเปิดหน้าต่างบันทึกไฟล์ของระบบ Android ให้คุณเลือกที่จัดเก็บเอง — ณ ปัจจุบัน <strong>ไม่มีระบบสำรองข้อมูลอัตโนมัติขึ้นคลาวด์ (cloud backup)</strong> ในแอปนี้ ไฟล์สำรองจะไปอยู่ที่ใดขึ้นอยู่กับที่คุณเลือกบันทึก (เช่น หน่วยความจำเครื่อง หรือหากคุณเลือกโฟลเดอร์ที่ซิงก์กับคลาวด์เอง เช่น Google Drive ก็เป็นการกระทำของคุณเอง ไม่ใช่ของแอป) เนื่องจากไฟล์สำรองอาจมีข้อมูลส่วนตัวและข้อมูลการเงินของคุณ กรุณาเก็บรักษาไว้ในที่ปลอดภัย</p>
+  <p>เมื่อคุณสร้างข้อมูลสำรอง แอปจะรวมข้อมูลแปลงปลูก งาน การเงิน และรูปภาพเป็นไฟล์เดียว คุณเลือกได้ 2 แบบ:</p>
+  <ul>
+    <li><strong>บันทึกเป็นไฟล์เอง:</strong> แอปเปิดหน้าต่างบันทึกไฟล์ของระบบ Android ให้คุณเลือกที่จัดเก็บเอง (เช่น หน่วยความจำเครื่อง)</li>
+    <li><strong>สำรองขึ้น Google Drive ของคุณ:</strong> ทำงานเฉพาะเมื่อคุณกดเชื่อมต่อ Google Drive และอนุญาตในหน้าจอขอสิทธิ์ของ Google เท่านั้น และแอปจะอัปโหลดเฉพาะเมื่อคุณกด "สำรองขึ้น Google Drive" เอง ไฟล์สำรองจะถูกส่งผ่านการเชื่อมต่อที่เข้ารหัส (HTTPS) ไปเก็บในโฟลเดอร์ "Palm Farm Flow Backup" ใน <strong>Google Drive ของคุณเอง</strong> ซึ่งคุณเห็นและจัดการได้ในแอป Google Drive ไฟล์นี้<strong>ไม่ผ่านและไม่ถูกเก็บบนเซิร์ฟเวอร์ของเรา</strong> และเราไม่สามารถเข้าถึง Google Drive ของคุณได้
+      <ul>
+        <li>แอปขอสิทธิ์แบบจำกัด (<code>drive.file</code>) ซึ่งเข้าถึงได้<strong>เฉพาะไฟล์ที่แอปนี้สร้างเอง</strong> ไม่สามารถอ่านหรือแก้ไขไฟล์อื่นใน Google Drive ของคุณ</li>
+        <li>แต่ละไฟล์สำรองมีป้ายข้อมูลทางเทคนิคแนบไว้ ได้แก่ รหัสบัญชีของคุณในแอป รหัสสุ่มของเครื่องที่สร้างไฟล์ (ใช้แยก "สำรองจากเครื่องนี้" กับ "สำรองจากเครื่องอื่น") เวอร์ชันแอป และเวอร์ชันฐานข้อมูล เพื่อให้แสดงรายการไฟล์สำรองและกู้คืนได้ถูกต้อง</li>
+        <li>แอปเก็บไฟล์สำรองล่าสุดไว้ 5 ชุด และจะลบชุดที่เก่ากว่านั้นที่แอปสร้างไว้เองโดยอัตโนมัติ</li>
+        <li>การเก็บข้อมูลใน Google Drive อยู่ภายใต้ข้อกำหนดและนโยบายความเป็นส่วนตัวของ Google</li>
+      </ul>
+    </li>
+  </ul>
+  <p>ณ ปัจจุบัน แอปนี้<strong>ไม่มีการสำรองข้อมูลขึ้นคลาวด์โดยอัตโนมัติ</strong> ทุกครั้งต้องเป็นคำสั่งของคุณเอง เนื่องจากไฟล์สำรองอาจมีข้อมูลส่วนตัวและข้อมูลการเงินของคุณ กรุณาเก็บรักษาไว้ในที่ปลอดภัย</p>
 
   <h2>5. สิ่งที่เราไม่ทำ</h2>
   <ul>
@@ -169,6 +182,7 @@
     <li><strong>ออกจากระบบ:</strong> เมื่อคุณออกจากระบบ ข้อมูลในเครื่องของบัญชีนั้นจะยังคงอยู่ในอุปกรณ์ และจะกลับมาแสดงเมื่อคุณเข้าสู่ระบบด้วยบัญชีเดิมอีกครั้ง</li>
     <li><strong>ถอนการติดตั้งแอป:</strong> การลบแอปออกจากอุปกรณ์จะลบข้อมูลสวนทั้งหมดที่เก็บไว้ในเครื่อง (ฐานข้อมูล รูปภาพ) อย่างถาวร เว้นแต่คุณจะสร้างไฟล์สำรองไว้ก่อน</li>
     <li><strong>การลบบัญชี:</strong> คุณสามารถลบบัญชีของคุณได้เองในแอป โดยไปที่ <strong>เพิ่มเติม &gt; บัญชี &gt; "ลบบัญชีและข้อมูลทั้งหมด"</strong> การลบบัญชีจะ (1) ลบบัญชีผู้ใช้ของคุณออกจากระบบยืนยันตัวตนอย่างถาวร (2) ลบข้อมูลสวนทั้งหมดที่เก็บไว้ในเครื่องนี้สำหรับบัญชีนั้น (แปลง งาน การเงิน และรูปภาพ) อย่างถาวร และ (3) ลบข้อมูลสถานะการทดลองใช้/สมาชิก Pro ของคุณ (ข้อ 2) จาก Firebase Firestore อย่างถาวร ขั้นตอนนี้มีการยืนยันหลายขั้นตอนเนื่องจากไม่สามารถย้อนกลับได้ หากต้องการเก็บข้อมูลไว้ กรุณาสร้างไฟล์สำรองก่อนลบบัญชี</li>
+    <li><strong>ไฟล์สำรองใน Google Drive:</strong> ไฟล์เหล่านี้อยู่ใน Google Drive ของคุณเอง จึง<strong>ไม่ถูกลบ</strong>เมื่อคุณถอนการติดตั้งแอปหรือลบบัญชี หากต้องการลบ ให้ลบโฟลเดอร์ "Palm Farm Flow Backup" ในแอป Google Drive ได้เอง และคุณยกเลิกสิทธิ์ที่ให้แอปนี้เข้าถึง Google Drive ได้ทุกเมื่อในการตั้งค่าบัญชี Google ของคุณ</li>
   </ul>
 
   <h2>7. ความปลอดภัย</h2>
@@ -191,7 +205,7 @@
     <span>Palm Farm Flow</span>
   </div>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: November 10, 2026</p>
+  <p class="updated">Last updated: November 14, 2026</p>
 
   <p>Palm Farm Flow ("the App") is an app for oil palm smallholder farmers to record and manage plot, task, and financial data for their farms. This policy explains how the App collects, uses, and retains your data.</p>
 
@@ -200,7 +214,7 @@
     <li><strong>When you sign in:</strong> The App uses Firebase Authentication to verify your identity. If you sign in with Google, we receive your <strong>email address and display name</strong> from your Google account. If you sign in with email/password, we receive the email you register. The App never stores your actual password — all password verification is handled by Google's Firebase Authentication.</li>
     <li><strong>Profile Picture (photoUrl):</strong> When you sign in with Google, we display your Google profile picture within the app. This image is loaded directly from Google's servers and is never saved to our database or backup files.</li>
     <li><strong>Technical sign-in data:</strong> Using Firebase Authentication and Google Sign-In necessarily sends some technical information (such as IP address and device information) to Google's servers as part of secure authentication. This is standard sign-in infrastructure behavior, not something the App additionally collects or uses itself.</li>
-    <li><strong>Your farm data:</strong> Plot records, care tasks, income/expense transactions, palm sale records, and any photos you add are <strong>stored locally on your device only</strong>, in an on-device database. We do not transmit this data to any server.</li>
+    <li><strong>Your farm data:</strong> Plot records, care tasks, income/expense transactions, palm sale records, and any photos you add are <strong>stored locally on your device</strong>, in an on-device database. We do not transmit this data to our servers or to any service provider. The only exception is when <strong>you choose to back it up to your own Google Drive</strong> (see Section 4).</li>
     <li><strong>Crash reports:</strong> If the App crashes in a published release (not during development), we use Firebase Crashlytics to receive technical reports about that crash (such as the code path where the error occurred, device model, OS version, and app version) so we can fix the problem and maintain the App. These reports <strong>never</strong> include your email, location, or your farm/financial data.</li>
     <li><strong>In-app usage data:</strong> The App keeps basic local usage information (such as which screens are opened or which features are used, and how often) <strong>stored on your device only</strong>, to help us understand which features are actually used and worth improving. This data is <strong>never exported from your device or shared with anyone</strong>, contains no name, email, location, or farm/financial content, and is deleted along with your other data when you delete your account.</li>
     <li><strong>Device security checks (Google Play Integrity API):</strong> The App uses Firebase App Check with the Google Play Integrity API to verify that requests to our Firebase services come from the genuine Palm Farm Flow app, installed from Google Play, on an unmodified device. The purpose is <strong>security and fraud prevention</strong>, such as stopping forged requests that try to reuse a Pro trial. As part of this check, Google may collect technical information about the device and the App, including <strong>device identifiers (Device IDs)</strong>. These checks <strong>never</strong> include your name, email, location, or your farm/financial data, and we do not use their results to identify you.</li>
@@ -223,9 +237,22 @@
     <li><strong>Firebase Firestore</strong> — Pro trial/subscription status (see Section 2)</li>
     <li><strong>Firebase App Check / Google Play Integrity API</strong> — technical device and app information, including device identifiers, for security checks (see Section 1)</li>
   </ul>
+  <p>Google Drive backup (Section 4) is not on this list: it is not data sent to our service provider, but a transfer into your own Google Drive at your direction.</p>
 
   <h2>4. Backup Files</h2>
-  <p>The App's "Backup" feature operates <strong>entirely on your device</strong>: when you create a backup, the App bundles your plot, task, finance, and photo data into a single file and opens Android's native Save dialog for you to choose where to store it. <strong>There is currently no automatic cloud backup</strong> in this App. Where the backup file ends up depends entirely on where you choose to save it (e.g. local device storage, or a cloud-synced folder like Google Drive if you choose one yourself — that is your own action, not something the App does). Because backup files may contain personal and financial data, please store them somewhere secure.</p>
+  <p>When you create a backup, the App bundles your plot, task, finance, and photo data into a single file. You can choose either way:</p>
+  <ul>
+    <li><strong>Save it as a file yourself:</strong> the App opens Android's native Save dialog for you to choose where to store it (e.g. local device storage).</li>
+    <li><strong>Back up to your own Google Drive:</strong> this works only after you tap to connect Google Drive and grant access on Google's permission screen, and the App uploads only when you tap "Back up to Google Drive" (สำรองขึ้น Google Drive) yourself. The backup file is sent over an encrypted connection (HTTPS) to a "Palm Farm Flow Backup" folder in <strong>your own Google Drive</strong>, where you can see and manage it in the Google Drive app. The file <strong>never passes through or is stored on our servers</strong>, and we have no access to your Google Drive.
+      <ul>
+        <li>The App requests limited access (<code>drive.file</code>), which reaches <strong>only files this App created</strong>. It cannot read or change any other file in your Google Drive.</li>
+        <li>Each backup file carries technical labels: your account ID in the App, a random ID for the device that made it (to tell "backed up from this phone" from "another phone"), the app version, and the database version, so backups can be listed and restored correctly.</li>
+        <li>The App keeps your 5 most recent backups and automatically deletes older backups that it created.</li>
+        <li>Storage in Google Drive is governed by Google's own terms and privacy policy.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>There is currently no automatic cloud backup</strong> in this App: every backup is your own action. Because backup files may contain personal and financial data, please store them somewhere secure.</p>
 
   <h2>5. What We Don't Do</h2>
   <ul>
@@ -239,6 +266,7 @@
     <li><strong>Signing out:</strong> When you sign out, that account's local data remains on your device and reappears when you sign back into the same account.</li>
     <li><strong>Uninstalling the App:</strong> Removing the App deletes all locally-stored farm data (database, photos) permanently, unless you created a backup first.</li>
     <li><strong>Account deletion:</strong> You can delete your account yourself, in the App: go to <strong>More &gt; Account &gt; "Delete account and all data"</strong> (ลบบัญชีและข้อมูลทั้งหมด). Deleting your account (1) permanently deletes your account from our authentication system, (2) permanently deletes all farm data stored on this device for that account (plots, tasks, finance records, and photos), and (3) permanently deletes your Pro trial/subscription status (Section 2) from Firebase Firestore. This requires multiple confirmation steps because it cannot be undone. If you want to keep your data, create a backup before deleting your account.</li>
+    <li><strong>Backups in Google Drive:</strong> these live in your own Google Drive, so they are <strong>not deleted</strong> when you uninstall the App or delete your account. To remove them, delete the "Palm Farm Flow Backup" folder in the Google Drive app yourself. You can revoke the App's access to your Google Drive at any time in your Google Account settings.</li>
   </ul>
 
   <h2>7. Security</h2>
